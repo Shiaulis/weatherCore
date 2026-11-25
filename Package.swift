@@ -18,14 +18,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Shiaulis/networking.git", from: "0.1.0"),
-        .package(url: "https://github.com/drmohundro/SWXMLHash.git", from: "7.0.0")
+        .package(url: "https://github.com/drmohundro/SWXMLHash.git", from: "7.0.0"),
     ],
     targets: [
         .target(
             name: "WeatherCore",
             dependencies: [
                 .product(name: "Networking", package: "networking"),
-                .product(name: "SWXMLHash", package: "SWXMLHash")
+                .product(name: "SWXMLHash", package: "SWXMLHash"),
             ]
         ),
         .testTarget(
