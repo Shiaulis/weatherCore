@@ -28,6 +28,7 @@ Sources/WeatherCore/
   ForecastDateFormatter.swift Date parsing and formatting
 Tests/WeatherCoreTests/       Swift Testing tests
 .swiftformat                  SwiftFormat config (shared with networking)
+.coderabbit.yaml              CodeRabbit review config (shared with Eesti-Ilm and networking)
 .github/workflows/ci.yml      CI workflow
 .github/actionlint.yaml       Declares the xcode-27 runner label for actionlint
 ```
@@ -62,6 +63,7 @@ Both jobs use the GitHub-hosted `xcode-27` image (macOS 27, arm64, public previe
 - `.swiftformat` is the style authority. It is copied from Shiaulis/networking; change it there first and keep the copies identical.
 - No new third-party dependencies without the owner's approval.
 - Scope changes to the ticket. No drive-by refactoring.
+- CodeRabbit reviews every PR using `.coderabbit.yaml`. It reads this file as its code guidelines, skips formatting comments and does not run SwiftLint.
 - Never commit personal data (phone numbers, private emails, Apple ID, API keys).
 
 ## Dependencies and releases
